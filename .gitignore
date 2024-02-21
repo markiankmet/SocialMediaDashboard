@@ -1,0 +1,7 @@
+*.sketch
+*.xd
+*.fig
+.DS_Store
+.idea
+.SocialMediaDashboard.iml
+node_modules
