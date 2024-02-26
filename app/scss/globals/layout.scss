@@ -2,8 +2,8 @@
 
 .container {
   padding: 0 u.rem(25);
-  max-width: u.rem(1100);
-  margin: 0 auto;
+  max-width: u.rem(1110);
+  margin: 0 auto u.rem(46);
 
   @include u.breakpoint("large") {
     padding: 0;
