@@ -9,3 +9,9 @@
     padding: 0;
   }
 }
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: u.rem(30);
+}

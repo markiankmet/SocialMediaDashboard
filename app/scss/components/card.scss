@@ -1,5 +1,20 @@
 @use "../util" as u;
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: u.rem(30);
+
+  @include u.breakpoint("medium") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include u.breakpoint("large") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
 .card {
   background: var(--dark-card);
   color: var(--dark-text1);
@@ -7,7 +22,6 @@
   padding: u.rem(25);
   border-radius: u.rem(5);
 
-  width: u.rem(255); // remove
 
   &--facebook {
     border-top: u.rem(5) solid var(--facebook);
@@ -18,8 +32,24 @@
   }
 
   &--instagram {
-    border-top: u.rem(5) solid var(--instagram-end);
+    position: relative;
+    padding-top: u.rem(30);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: u.rem(5);
+      background: linear-gradient(225deg, var(--instagram-start) 0%,
+              var(--instagram-middle) 50.91%,
+              var(--instagram-end) 100%);
+      border-top-left-radius: u.rem(5);
+      border-top-right-radius: u.rem(5);
+    }
   }
+
 
   &--youtube {
     border-top: u.rem(5) solid var(--youtube);
@@ -34,6 +64,7 @@
 
   &__icon {
     margin-right: u.rem(8);
+    height: u.rem(20);
   }
 
   &__username {
@@ -44,6 +75,7 @@
   &__followers {
     margin-bottom: u.rem(25);
   }
+
   &__count {
     color: var(--light-bg);
     font-weight: bold;
