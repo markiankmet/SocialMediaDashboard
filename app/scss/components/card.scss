@@ -21,8 +21,12 @@
   text-align: center;
   padding: u.rem(25);
   border-radius: u.rem(5);
+  transition: background-color 125ms ease-in-out;
+  cursor: pointer;
 
-
+  &:hover {
+    background: var(--dark-card-hover);
+  }
   &--facebook {
     border-top: u.rem(5) solid var(--facebook);
   }
@@ -62,6 +66,12 @@
     margin-bottom: u.rem(28);
   }
 
+  &__subtitle {
+    font-size: u.rem(14);
+    font-weight: 700;
+    margin: 0;
+  }
+
   &__icon {
     margin-right: u.rem(8);
     height: u.rem(20);
@@ -88,7 +98,7 @@
     }
 
     &--small {
-
+        font-size: u.rem(32);
     }
 
   }
