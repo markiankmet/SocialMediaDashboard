@@ -1,27 +1,27 @@
 @use "../util" as u;
 
 .header {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: u.rem(36);
 
   @include u.breakpoint("large") {
-    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-
   &__title {
+    width: 100%;
 
+    @include u.breakpoint("medium") {
+      width: auto;
+    }
   }
 
   &__subtitle {
     font-size: u.rem(14);
     font-weight: 700;
-    color: var(--dark-text1);
-  }
-
-  &__toggle {
-
+    color: var(--text-color2);
   }
 
 }

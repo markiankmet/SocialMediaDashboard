@@ -16,8 +16,8 @@
 
 
 .card {
-  background: var(--dark-card);
-  color: var(--dark-text1);
+  background: var(--card-bg);
+  color: var(--text-color);
   text-align: center;
   padding: u.rem(25);
   border-radius: u.rem(5);
@@ -25,7 +25,7 @@
   cursor: pointer;
 
   &:hover {
-    background: var(--dark-card-hover);
+    background: var(--card-hover);
   }
   &--facebook {
     border-top: u.rem(5) solid var(--facebook);
@@ -70,6 +70,7 @@
     font-size: u.rem(14);
     font-weight: 700;
     margin: 0;
+    color: var(--text-color2);
   }
 
   &__icon {
@@ -80,6 +81,7 @@
   &__username {
     font-size: u.rem(12);
     font-weight: bold;
+    color: var(--text-color2);
   }
 
   &__followers {
@@ -87,7 +89,7 @@
   }
 
   &__count {
-    color: var(--light-bg);
+    color: var(--text-color);
     font-weight: bold;
     letter-spacing: u.rem(-2);
     line-height: 1;
@@ -108,7 +110,7 @@
     font-weight: normal;
     letter-spacing: u.rem(5);
     text-transform: uppercase;
-    color: var(--dark-text1)
+    color: var(--text-color2);
   }
 
   &__change {
